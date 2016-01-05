@@ -6,15 +6,15 @@ var fixtures = {
     instructor: "Vijay",
     assignments:[
       {
-        assignmentName: 'A1',
+        assignmentName: 'Assignment 1',
         dueDate: moment().add(1, 'days')
       },
       {
-        assignmentName: 'A2',
+        assignmentName: 'Assignment 2',
         dueDate: moment().add(5, 'days')
       },
       {
-        assignmentName: 'P3',
+        assignmentName: 'Project3',
         dueDate: moment().add(20, 'days')
       }
     ]
@@ -23,15 +23,15 @@ var fixtures = {
     instructor: "Joga",
     assignments:[
       {
-        assignmentName: 'PP1',
-        dueDate: moment().subtract(20, 'days')
+        assignmentName: 'Practice Problem 1',
+        dueDate: moment().add(6, 'days')
       },
       {
-        assignmentName: 'PP2',
-        dueDate: moment().subtract(10, 'days')
+        assignmentName: 'Practice Problem 2',
+        dueDate: moment().add(10, 'days')
       },
       {
-        assignmentName: 'P1',
+        assignmentName: 'Project 1',
         dueDate: moment().add(30, 'days')
       }
     ]
@@ -44,13 +44,5 @@ router.route('/')
     res.json(fixtures);
     next();
   })
-  .post(function(req, res, next) {
-    console.log('req');
-    console.log(req);
-    console.log('req-body');
-    console.log(req.body);
-    res.send("file uploaded");
-  })
-  ;
 
 module.exports = router;

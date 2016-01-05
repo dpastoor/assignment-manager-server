@@ -42,6 +42,15 @@ router.route('/')
   .get(function(req, res, next) {
     console.log('received request');
     res.json(fixtures);
-  });
+    next();
+  })
+  .post(function(req, res, next) {
+    console.log('req');
+    console.log(req);
+    console.log('req-body');
+    console.log(req.body);
+    res.send("file uploaded");
+  })
+  ;
 
 module.exports = router;
